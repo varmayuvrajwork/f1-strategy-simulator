@@ -1,0 +1,187 @@
+:root {
+  /* === Color System === */
+  --carbon-950: #05070d;
+  --carbon-900: #0a0e1a;
+  --carbon-850: #0e1320;
+  --carbon-800: #141a2a;
+  --carbon-700: #1b2233;
+  --carbon-600: #252d42;
+  --carbon-500: #3a4660;
+  --carbon-400: #5a6788;
+  --carbon-300: #8896b5;
+  --carbon-200: #b8c2d8;
+  --carbon-100: #e2e8f5;
+
+  /* Primary — Racing Red */
+  --red-900: #4a0707;
+  --red-700: #8b1010;
+  --red-500: #d11414;
+  --red-400: #ff1e1e;
+  --red-300: #ff4d4d;
+  --red-200: #ff8080;
+
+  /* Accent — Electric Cyan */
+  --cyan-700: #0a5f6f;
+  --cyan-500: #00b8d4;
+  --cyan-400: #22d3ee;
+  --cyan-300: #67e8f9;
+
+  /* Success — Green */
+  --green-600: #16a34a;
+  --green-500: #22c55e;
+  --green-400: #4ade80;
+
+  /* Warning — Amber */
+  --amber-600: #d97706;
+  --amber-500: #f59e0b;
+  --amber-400: #fbbf24;
+
+  /* Error */
+  --err-600: #dc2626;
+  --err-500: #ef4444;
+
+  /* Spacing — 8px system */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* Typography */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Radii */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-full: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.55);
+  --shadow-red: 0 0 30px rgba(255,30,30,0.35);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.18s;
+  --dur: 0.32s;
+  --dur-slow: 0.6s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--carbon-950);
+  color: var(--carbon-100);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--red-500);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--carbon-900);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--carbon-600);
+  border-radius: var(--r-full);
+  border: 2px solid var(--carbon-900);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--carbon-500);
+}
+
+/* Utility — fade/slide in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulseRed {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,30,30,0.5); }
+  50% { box-shadow: 0 0 0 10px rgba(255,30,30,0); }
+}
+
+@keyframes streak {
+  0% { transform: translateX(-120%) skewX(-12deg); opacity: 0; }
+  60% { opacity: 1; }
+  100% { transform: translateX(220%) skewX(-12deg); opacity: 0; }
+}
+
+@keyframes spinFast {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.25; }
+}
