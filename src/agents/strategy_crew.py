@@ -2,7 +2,11 @@ import os
 import sys
 import json
 from dotenv import load_dotenv
-from crewai import Agent, Task, Crew, Process, LLM
+try:
+    from crewai import Agent, Task, Crew, Process, LLM
+except ImportError:
+    from crewai import Agent, Task, Crew, Process
+    from crewai.llm import LLM
 
 if hasattr(sys.stdout, 'reconfigure'):
     try:
