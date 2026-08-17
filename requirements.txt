@@ -9,3 +9,4 @@ langchain
 langchain-community
 langchain-groq
 numpy
+tiktoken>=0.7.0
