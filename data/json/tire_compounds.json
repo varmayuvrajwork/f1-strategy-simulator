@@ -1,0 +1,9 @@
+[
+    {"compound": "C1", "grip_initial": 0.88, "degradation_rate": 0.010, "optimal_temp_window": [110, 130], "is_wet": false},
+    {"compound": "C2", "grip_initial": 0.92, "degradation_rate": 0.015, "optimal_temp_window": [105, 125], "is_wet": false},
+    {"compound": "C3", "grip_initial": 0.96, "degradation_rate": 0.025, "optimal_temp_window": [100, 120], "is_wet": false},
+    {"compound": "C4", "grip_initial": 0.98, "degradation_rate": 0.035, "optimal_temp_window": [95, 115], "is_wet": false},
+    {"compound": "C5", "grip_initial": 1.00, "degradation_rate": 0.045, "optimal_temp_window": [90, 110], "is_wet": false},
+    {"compound": "Intermediate", "grip_initial": 0.85, "degradation_rate": 0.040, "optimal_temp_window": [60, 80], "is_wet": true},
+    {"compound": "Wet", "grip_initial": 0.80, "degradation_rate": 0.020, "optimal_temp_window": [50, 70], "is_wet": true}
+]

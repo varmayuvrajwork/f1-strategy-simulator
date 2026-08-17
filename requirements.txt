@@ -1,0 +1,11 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+crewai
+fastf1==3.3.6
+requests==2.32.3
+pydantic>=2.8.2
+python-dotenv==1.0.1
+langchain==0.2.1
+langchain-community==0.2.1
+langchain-groq
+numpy

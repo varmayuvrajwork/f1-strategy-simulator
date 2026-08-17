@@ -1,0 +1,156 @@
+[
+    {
+        "id": "ver",
+        "team_id": "red_bull",
+        "name": "Max Verstappen",
+        "tire_management": 96,
+        "pace": 97
+    },
+    {
+        "id": "had",
+        "team_id": "red_bull",
+        "name": "Isack Hadjar",
+        "tire_management": 84,
+        "pace": 88
+    },
+    {
+        "id": "lec",
+        "team_id": "ferrari",
+        "name": "Charles Leclerc",
+        "tire_management": 92,
+        "pace": 99
+    },
+    {
+        "id": "ham",
+        "team_id": "ferrari",
+        "name": "Lewis Hamilton",
+        "tire_management": 96,
+        "pace": 98
+    },
+    {
+        "id": "rus",
+        "team_id": "mercedes",
+        "name": "George Russell",
+        "tire_management": 90,
+        "pace": 99
+    },
+    {
+        "id": "ant",
+        "team_id": "mercedes",
+        "name": "Andrea Kimi Antonelli",
+        "tire_management": 85,
+        "pace": 99
+    },
+    {
+        "id": "nor",
+        "team_id": "mclaren",
+        "name": "Lando Norris",
+        "tire_management": 93,
+        "pace": 97
+    },
+    {
+        "id": "pia",
+        "team_id": "mclaren",
+        "name": "Oscar Piastri",
+        "tire_management": 91,
+        "pace": 95
+    },
+    {
+        "id": "alo",
+        "team_id": "aston_martin",
+        "name": "Fernando Alonso",
+        "tire_management": 94,
+        "pace": 77
+    },
+    {
+        "id": "str",
+        "team_id": "aston_martin",
+        "name": "Lance Stroll",
+        "tire_management": 85,
+        "pace": 77
+    },
+    {
+        "id": "alb",
+        "team_id": "williams",
+        "name": "Alexander Albon",
+        "tire_management": 89,
+        "pace": 88
+    },
+    {
+        "id": "sai",
+        "team_id": "williams",
+        "name": "Carlos Sainz Jr.",
+        "tire_management": 94,
+        "pace": 87
+    },
+    {
+        "id": "law",
+        "team_id": "vcarb",
+        "name": "Liam Lawson",
+        "tire_management": 86,
+        "pace": 89
+    },
+    {
+        "id": "lin",
+        "team_id": "vcarb",
+        "name": "Arvid Lindblad",
+        "tire_management": 82,
+        "pace": 90
+    },
+    {
+        "id": "gas",
+        "team_id": "alpine",
+        "name": "Pierre Gasly",
+        "tire_management": 88,
+        "pace": 89
+    },
+    {
+        "id": "col",
+        "team_id": "alpine",
+        "name": "Franco Colapinto",
+        "tire_management": 87,
+        "pace": 86
+    },
+    {
+        "id": "hul",
+        "team_id": "audi",
+        "name": "Nico Hulkenberg",
+        "tire_management": 90,
+        "pace": 89
+    },
+    {
+        "id": "bor",
+        "team_id": "audi",
+        "name": "Gabriel Bortoleto",
+        "tire_management": 85,
+        "pace": 91
+    },
+    {
+        "id": "oco",
+        "team_id": "haas",
+        "name": "Esteban Ocon",
+        "tire_management": 87,
+        "pace": 88
+    },
+    {
+        "id": "bea",
+        "team_id": "haas",
+        "name": "Oliver Bearman",
+        "tire_management": 86,
+        "pace": 92
+    },
+    {
+        "id": "per",
+        "team_id": "cadillac",
+        "name": "Sergio Perez",
+        "tire_management": 93,
+        "pace": 77
+    },
+    {
+        "id": "bot",
+        "team_id": "cadillac",
+        "name": "Valtteri Bottas",
+        "tire_management": 88,
+        "pace": 76
+    }
+]

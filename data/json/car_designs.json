@@ -1,0 +1,13 @@
+[
+    {"team_id": "red_bull", "aero_efficiency": 97, "downforce": 96, "tire_wear_multiplier": 0.93},
+    {"team_id": "ferrari", "aero_efficiency": 96, "downforce": 95, "tire_wear_multiplier": 0.98},
+    {"team_id": "mclaren", "aero_efficiency": 98, "downforce": 95, "tire_wear_multiplier": 0.94},
+    {"team_id": "mercedes", "aero_efficiency": 95, "downforce": 94, "tire_wear_multiplier": 0.97},
+    {"team_id": "aston_martin", "aero_efficiency": 92, "downforce": 91, "tire_wear_multiplier": 1.01},
+    {"team_id": "williams", "aero_efficiency": 93, "downforce": 89, "tire_wear_multiplier": 1.02},
+    {"team_id": "vcarb", "aero_efficiency": 90, "downforce": 90, "tire_wear_multiplier": 1.03},
+    {"team_id": "alpine", "aero_efficiency": 91, "downforce": 88, "tire_wear_multiplier": 1.05},
+    {"team_id": "audi", "aero_efficiency": 89, "downforce": 88, "tire_wear_multiplier": 1.04},
+    {"team_id": "haas", "aero_efficiency": 88, "downforce": 87, "tire_wear_multiplier": 1.02},
+    {"team_id": "cadillac", "aero_efficiency": 86, "downforce": 85, "tire_wear_multiplier": 1.06}
+]

@@ -1,0 +1,7 @@
+[
+    {"id": "mercedes", "name": "Mercedes", "power_rating": 95, "reliability_rating": 94, "efficiency_rating": 95},
+    {"id": "ferrari", "name": "Ferrari", "power_rating": 96, "reliability_rating": 92, "efficiency_rating": 94},
+    {"id": "honda", "name": "Honda", "power_rating": 95, "reliability_rating": 95, "efficiency_rating": 93},
+    {"id": "rbpt_ford", "name": "Red Bull Ford Powertrains", "power_rating": 94, "reliability_rating": 90, "efficiency_rating": 94},
+    {"id": "audi", "name": "Audi", "power_rating": 90, "reliability_rating": 88, "efficiency_rating": 89}
+]

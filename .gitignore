@@ -1,0 +1,22 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# FastF1 Cache
+data/fastf1_cache/
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store

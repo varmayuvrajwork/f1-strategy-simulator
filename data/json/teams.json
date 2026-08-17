@@ -1,0 +1,13 @@
+[
+    {"id": "red_bull", "name": "Oracle Red Bull Racing", "engine_id": "rbpt_ford", "base": "Milton Keynes"},
+    {"id": "ferrari", "name": "Ferrari", "engine_id": "ferrari", "base": "Maranello"},
+    {"id": "mercedes", "name": "Mercedes-AMG", "engine_id": "mercedes", "base": "Brackley"},
+    {"id": "mclaren", "name": "McLaren", "engine_id": "mercedes", "base": "Woking"},
+    {"id": "aston_martin", "name": "Aston Martin", "engine_id": "honda", "base": "Silverstone"},
+    {"id": "williams", "name": "Williams", "engine_id": "mercedes", "base": "Grove"},
+    {"id": "vcarb", "name": "Visa Cash App Racing Bulls", "engine_id": "rbpt_ford", "base": "Faenza"},
+    {"id": "alpine", "name": "Alpine", "engine_id": "mercedes", "base": "Enstone"},
+    {"id": "audi", "name": "Audi", "engine_id": "audi", "base": "Hinwil"},
+    {"id": "haas", "name": "Haas", "engine_id": "ferrari", "base": "Kannapolis"},
+    {"id": "cadillac", "name": "Cadillac", "engine_id": "ferrari", "base": "Fishers"}
+]
