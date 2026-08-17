@@ -12,9 +12,19 @@ from src.data.weather_fetcher import get_weather_for_location
 from src.data.telemetry_ingestor import ingest_telemetry
 from src.data.fastf1_helper import get_session_telemetry
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app_title = os.getenv("APP_TITLE", "F1 Strategy Simulator Engine")
 app_version = os.getenv("APP_VERSION", "2026.1")
 app = FastAPI(title=f"{app_title} v{app_version}", version=app_version)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 _API_JSON_CACHE = {}
 
