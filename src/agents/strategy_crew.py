@@ -1,12 +1,17 @@
 import os
 import sys
 import json
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
 try:
     from crewai import Agent, Task, Crew, Process, LLM
 except ImportError:
-    from crewai import Agent, Task, Crew, Process
-    from crewai.llm import LLM
+    try:
+        from crewai import Agent, Task, Crew, Process
+        from crewai.llm import LLM
+    except ImportError:
+        from crewai import Agent, Task, Crew, Process
+        LLM = None
 
 if hasattr(sys.stdout, 'reconfigure'):
     try:
@@ -29,7 +34,11 @@ def get_groq_llm():
     groq_model = os.getenv("GROQ_MODEL", "qwen/qwen3.6-27b")
     if groq_api_key:
         model_str = groq_model if groq_model.startswith("groq/") else f"groq/{groq_model}"
-        return LLM(model=model_str, api_key=groq_api_key, max_tokens=2048)
+        if LLM is not None:
+            return LLM(model=model_str, api_key=groq_api_key, max_tokens=2048)
+        else:
+            from langchain_groq import ChatGroq
+            return ChatGroq(groq_api_key=groq_api_key, model_name=groq_model, max_tokens=2048)
     else:
         raise ValueError("GROQ_API_KEY is missing from environment variables.")
 
