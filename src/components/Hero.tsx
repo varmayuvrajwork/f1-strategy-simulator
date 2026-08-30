@@ -26,10 +26,20 @@ export default function Hero() {
         </p>
 
         <div className="hero-cta-row">
-          <Link to="/circuits" className="hero-cta primary">
+          <a
+            href="#simulator-workspace"
+            className="hero-cta primary"
+            onClick={(e) => {
+              e.preventDefault()
+              const el = document.getElementById('simulator-workspace')
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth' })
+              }
+            }}
+          >
             Start a Simulation
             <ArrowRight size={18} strokeWidth={2.4} />
-          </Link>
+          </a>
           <Link to="/calendar" className="hero-cta ghost">
             View 2026 Calendar
           </Link>

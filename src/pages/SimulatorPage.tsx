@@ -4,7 +4,7 @@ import SimulatorForm from '../components/SimulatorForm'
 import StrategyResult from '../components/StrategyResult'
 import { circuits, teams } from '../data/reference'
 import { runSimulationEngine, type SimulationEngineResult } from '../lib/simulationEngine'
-import { supabase } from '../lib/supabase'
+import { saveSimulationRun } from '../lib/storage'
 import { AlertTriangle } from 'lucide-react'
 import './SimulatorPage.css'
 
@@ -63,20 +63,19 @@ export default function SimulatorPage() {
     if (!result) return
     setSaving(true)
     const { weather, circuit_name, team_name } = result
-    const { error } = await supabase.from('simulations').insert({
+    await saveSimulationRun({
       race_id: circuits.find((c) => c.name === circuit_name)?.id ?? '',
       team_id: teams.find((t) => t.name === team_name)?.id ?? '',
       circuit_name,
       team_name,
       weather_condition: weather.condition ?? 'Clear',
-      air_temperature: weather.air_temperature ?? weather.temperature_celsius ?? null,
-      track_temperature: weather.track_temperature ?? null,
-      rainfall_mm: weather.rainfall_mm ?? null,
+      air_temperature: weather.air_temperature ?? weather.temperature_celsius ?? 0,
+      track_temperature: weather.track_temperature ?? 0,
+      rainfall_mm: weather.rainfall_mm ?? 0,
       strategy_output: result.strategy_output,
     })
     setSaving(false)
-    if (!error) setSaved(true)
-    else setError(error.message)
+    setSaved(true)
   }
 
   const handleReset = () => {
@@ -89,7 +88,7 @@ export default function SimulatorPage() {
     <div className="simulator-page">
       <Hero />
 
-      <section className="simulator-workspace">
+      <section className="simulator-workspace" id="simulator-workspace">
         <div className="simulator-grid">
           <div className="simulator-left">
             <SimulatorForm circuits={circuits} teams={teams} onSubmit={handleRun} loading={loading} />

@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom'
-import { Gauge, Flag, Users, Calendar, Radio, History } from 'lucide-react'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { Gauge, Flag, Users, Calendar, History } from 'lucide-react'
 import './Header.css'
 
 const navItems = [
@@ -11,6 +11,28 @@ const navItems = [
 ]
 
 export default function Header() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleSimulateClick = (e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      e.preventDefault()
+      const el = document.getElementById('simulator-workspace')
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      e.preventDefault()
+      navigate('/')
+      setTimeout(() => {
+        const el = document.getElementById('simulator-workspace')
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    }
+  }
+
   return (
     <header className="site-header">
       <div className="header-bg-streak" aria-hidden="true" />
@@ -36,6 +58,7 @@ export default function Header() {
                 key={item.to}
                 to={item.to}
                 end={item.end}
+                onClick={item.to === '/' ? handleSimulateClick : undefined}
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <Icon size={16} strokeWidth={2.2} />

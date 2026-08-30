@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { supabase } from '../lib/supabase'
+import { fetchSavedSimulations, deleteSimulationRun } from '../lib/storage'
 import type { SavedSimulation } from '../types'
 import Chip from '../components/Chip'
 import { History, Trash2, ChevronRight, Calendar, CloudRain, Thermometer, X } from 'lucide-react'
@@ -14,15 +14,11 @@ export default function HistoryPage() {
   const load = async () => {
     setLoading(true)
     setError(null)
-    const { data, error } = await supabase
-      .from('simulations')
-      .select('*')
-      .order('created_at', { ascending: false })
-      .limit(50)
+    const { data, error } = await fetchSavedSimulations()
     if (error) {
-      setError(error.message)
+      setError(error)
     } else {
-      setRuns((data ?? []) as SavedSimulation[])
+      setRuns(data ?? [])
     }
     setLoading(false)
   }
@@ -32,11 +28,9 @@ export default function HistoryPage() {
   }, [])
 
   const handleDelete = async (id: string) => {
-    const { error } = await supabase.from('simulations').delete().eq('id', id)
-    if (!error) {
-      setRuns((r) => r.filter((row) => row.id !== id))
-      if (active?.id === id) setActive(null)
-    }
+    await deleteSimulationRun(id)
+    setRuns((r) => r.filter((row) => row.id !== id))
+    if (active?.id === id) setActive(null)
   }
 
   return (
