@@ -34,10 +34,24 @@ export default function Header() {
       <div className="header-bg-streak" aria-hidden="true" />
       <div className="header-inner">
         <Link to="/" className="brand">
-          <div className="brand-mark">
-            <svg viewBox="0 0 64 64" className="brand-svg">
-              <path d="M20 46 L32 18 L44 46" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              <circle cx="32" cy="34" r="3" fill="currentColor" />
+          <div className="brand-mark" title="Apex F1 Strategy Engine">
+            <svg viewBox="0 0 64 64" fill="currentColor" className="brand-svg">
+              {/* Rear Wing Endplate & DRS Flap */}
+              <path d="M6 20H13V23H10V35H13V38H6V20Z" />
+              <path d="M9 24H20V27H9V24Z" />
+              {/* Main Aero Body & Nose Cone */}
+              <path d="M10 32C15 32 20 30 26 30C33 30 40 29 48 31C52 32 57 33 61 33C62.5 33 63 32 62 31.5L56 28.5C49 27.5 41 27.5 33 27.5C25 27.5 16 29.5 10 32Z" />
+              {/* Front Wing Assembly */}
+              <path d="M52 34L61 34V37.5L52 36V34Z" />
+              <path d="M59 31V39" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              {/* Cockpit Halo Safety Ring */}
+              <path d="M29 24.5C32.5 21 36.5 21 40 24.5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+              {/* Rear Wheel */}
+              <circle cx="18" cy="36" r="6.5" />
+              <circle cx="18" cy="36" r="3" fill="var(--red-700)" />
+              {/* Front Wheel */}
+              <circle cx="47" cy="36" r="5.5" />
+              <circle cx="47" cy="36" r="2.5" fill="var(--red-700)" />
             </svg>
           </div>
           <div className="brand-text">
