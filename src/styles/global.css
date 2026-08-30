@@ -1,22 +1,22 @@
 :root {
-  /* === Color System === */
-  --carbon-950: #05070d;
-  --carbon-900: #0a0e1a;
-  --carbon-850: #0e1320;
-  --carbon-800: #141a2a;
-  --carbon-700: #1b2233;
-  --carbon-600: #252d42;
-  --carbon-500: #3a4660;
-  --carbon-400: #5a6788;
-  --carbon-300: #8896b5;
-  --carbon-200: #b8c2d8;
-  --carbon-100: #e2e8f5;
+  /* === Color System — Official F1 Pit Wall Telemetry Palette === */
+  --carbon-950: #0b0e14;
+  --carbon-900: #10141e;
+  --carbon-850: #161b26;
+  --carbon-800: #1c2230;
+  --carbon-700: #262e3d;
+  --carbon-600: #354054;
+  --carbon-500: #4f5e7b;
+  --carbon-400: #8896b0;
+  --carbon-300: #cbd5e1;
+  --carbon-200: #e2e8f0;
+  --carbon-100: #f8fafc;
 
-  /* Primary — Racing Red */
-  --red-900: #4a0707;
-  --red-700: #8b1010;
-  --red-500: #d11414;
-  --red-400: #ff1e1e;
+  /* Primary — Official F1 Racing Red */
+  --red-900: #3b0000;
+  --red-700: #9e0000;
+  --red-500: #e10600;
+  --red-400: #ff1801;
   --red-300: #ff4d4d;
   --red-200: #ff8080;
 
@@ -54,9 +54,10 @@
   --sp-20: 80px;
   --sp-24: 96px;
 
-  /* Typography */
-  --font-display: 'Barlow Condensed', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Typography — Official F1 Broadcast & Pit Wall Hierarchy */
+  --font-display: 'Titillium Web', 'Barlow Condensed', sans-serif;
+  --font-title: 'Barlow Condensed', 'Titillium Web', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Radii */
@@ -70,7 +71,7 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
   --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
   --shadow-lg: 0 20px 50px rgba(0,0,0,0.55);
-  --shadow-red: 0 0 30px rgba(255,30,30,0.35);
+  --shadow-red: 0 0 30px rgba(255,24,1,0.35);
 
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);

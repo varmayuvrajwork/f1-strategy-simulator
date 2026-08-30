@@ -14,7 +14,7 @@ export default function Footer() {
           <span className="footer-dot" />
           <span>24 ROUNDS</span>
           <span className="footer-dot" />
-          <span>10 CONSTRUCTORS</span>
+          <span>11 CONSTRUCTORS</span>
         </div>
       </div>
     </footer>

@@ -258,12 +258,13 @@
 }
 
 .driver-card-rationale {
-  font-size: 0.86rem;
-  color: var(--carbon-300);
-  line-height: 1.55;
-  padding: var(--sp-3);
-  background: var(--carbon-900);
-  border-left: 2px solid var(--red-500);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--carbon-200);
+  line-height: 1.65;
+  padding: var(--sp-4);
+  background: rgba(10, 14, 26, 0.7);
+  border-left: 3px solid var(--red-400);
   border-radius: 0 var(--r-sm) var(--r-sm) 0;
 }
 .driver-card-foot {
