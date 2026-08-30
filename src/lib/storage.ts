@@ -3,6 +3,18 @@ import type { SavedSimulation } from '../types'
 
 const LOCAL_STORAGE_KEY = 'apex_saved_simulations'
 
+function isSupabaseConfigured(): boolean {
+  const url = import.meta.env.VITE_SUPABASE_URL as string
+  const key = import.meta.env.VITE_SUPABASE_ANON_KEY as string
+  return Boolean(
+    url &&
+      key &&
+      !url.includes('placeholder') &&
+      url.startsWith('https://') &&
+      url.includes('.supabase.co'),
+  )
+}
+
 export function getLocalSavedSimulations(): SavedSimulation[] {
   try {
     const raw = localStorage.getItem(LOCAL_STORAGE_KEY)
@@ -46,16 +58,15 @@ export async function saveSimulationRun(
   // Always save to LocalStorage first for instant, guaranteed persistence!
   saveLocalSimulation(simData)
 
-  // Sync to Supabase if configured
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
-  if (supabaseUrl && !supabaseUrl.includes('placeholder')) {
+  // Sync to Supabase only if valid configuration exists
+  if (isSupabaseConfigured()) {
     try {
       const { error } = await supabase.from('simulations').insert(simData)
       if (error) {
         console.warn('Supabase save warning:', error.message)
       }
     } catch (err) {
-      console.warn('Supabase save exception (saved to local storage):', err)
+      console.warn('Supabase save exception:', err)
     }
   }
 
@@ -65,8 +76,7 @@ export async function saveSimulationRun(
 export async function fetchSavedSimulations(): Promise<{ data: SavedSimulation[]; error?: string }> {
   const localData = getLocalSavedSimulations()
 
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
-  if (supabaseUrl && !supabaseUrl.includes('placeholder')) {
+  if (isSupabaseConfigured()) {
     try {
       const { data, error } = await supabase
         .from('simulations')
@@ -84,7 +94,7 @@ export async function fetchSavedSimulations(): Promise<{ data: SavedSimulation[]
         return { data: merged }
       }
     } catch (err) {
-      console.warn('Supabase fetch failed, displaying local storage runs:', err)
+      console.warn('Supabase fetch failed:', err)
     }
   }
 
@@ -94,8 +104,7 @@ export async function fetchSavedSimulations(): Promise<{ data: SavedSimulation[]
 export async function deleteSimulationRun(id: string): Promise<void> {
   deleteLocalSimulation(id)
 
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
-  if (supabaseUrl && !supabaseUrl.includes('placeholder')) {
+  if (isSupabaseConfigured()) {
     try {
       await supabase.from('simulations').delete().eq('id', id)
     } catch (err) {

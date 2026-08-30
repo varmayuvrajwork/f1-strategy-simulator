@@ -15,22 +15,18 @@ export default function Header() {
   const navigate = useNavigate()
 
   const handleSimulateClick = (e: React.MouseEvent) => {
-    if (location.pathname === '/') {
-      e.preventDefault()
+    e.preventDefault()
+    if (location.pathname !== '/') {
+      navigate('/')
+    }
+    setTimeout(() => {
       const el = document.getElementById('simulator-workspace')
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        window.scrollTo({ top: 400, behavior: 'smooth' })
       }
-    } else {
-      e.preventDefault()
-      navigate('/')
-      setTimeout(() => {
-        const el = document.getElementById('simulator-workspace')
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' })
-        }
-      }, 100)
-    }
+    }, 50)
   }
 
   return (
