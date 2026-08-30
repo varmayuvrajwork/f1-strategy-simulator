@@ -20,3 +20,6 @@ data/fastf1_cache/
 .vscode/
 .idea/
 .DS_Store
+
+# Media & Demo Recordings
+*.webp
