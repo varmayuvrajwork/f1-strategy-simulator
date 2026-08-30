@@ -35,23 +35,21 @@ export default function Header() {
       <div className="header-inner">
         <Link to="/" className="brand">
           <div className="brand-mark" title="Apex F1 Strategy Engine">
-            <svg viewBox="0 0 64 64" fill="currentColor" className="brand-svg">
-              {/* Rear Wing Endplate & DRS Flap */}
-              <path d="M6 20H13V23H10V35H13V38H6V20Z" />
-              <path d="M9 24H20V27H9V24Z" />
-              {/* Main Aero Body & Nose Cone */}
-              <path d="M10 32C15 32 20 30 26 30C33 30 40 29 48 31C52 32 57 33 61 33C62.5 33 63 32 62 31.5L56 28.5C49 27.5 41 27.5 33 27.5C25 27.5 16 29.5 10 32Z" />
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="brand-svg">
+              {/* Rear Wing Assembly */}
+              <rect x="6" y="21" width="6" height="22" rx="1" fill="currentColor" />
+              <rect x="10" y="27" width="10" height="10" rx="1" fill="currentColor" />
+              {/* Aerodynamic Body Chassis & Nose Cone */}
+              <path d="M14 26C20 26 26 24 33 24C41 24 49 26 56 30C58 31 58 33 56 34C49 38 41 40 33 40C26 40 20 38 14 38Z" fill="currentColor" />
               {/* Front Wing Assembly */}
-              <path d="M52 34L61 34V37.5L52 36V34Z" />
-              <path d="M59 31V39" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              {/* Cockpit Halo Safety Ring */}
-              <path d="M29 24.5C32.5 21 36.5 21 40 24.5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-              {/* Rear Wheel */}
-              <circle cx="18" cy="36" r="6.5" />
-              <circle cx="18" cy="36" r="3" fill="var(--red-700)" />
-              {/* Front Wheel */}
-              <circle cx="47" cy="36" r="5.5" />
-              <circle cx="47" cy="36" r="2.5" fill="var(--red-700)" />
+              <path d="M52 24L60 31V33L52 40V37L57 32L52 27V24Z" fill="currentColor" />
+              {/* Wheels */}
+              <rect x="16" y="15" width="10" height="7" rx="2" fill="#0A0E1A" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="16" y="42" width="10" height="7" rx="2" fill="#0A0E1A" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="42" y="18" width="9" height="6" rx="2" fill="#0A0E1A" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="42" y="40" width="9" height="6" rx="2" fill="#0A0E1A" stroke="currentColor" strokeWidth="1.5" />
+              {/* Cockpit Halo Center */}
+              <circle cx="33" cy="32" r="3.5" fill="#0A0E1A" stroke="currentColor" strokeWidth="1.5" />
             </svg>
           </div>
           <div className="brand-text">
